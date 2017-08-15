@@ -87,7 +87,7 @@ public class ColaMensaje {
             // Send a message
             String myQueueUrl = "https://sqs.us-east-2.amazonaws.com/364319865579/altaPrioridad.fifo";
             System.out.println("Sending a message to MyFifoQueue.fifo.\n");
-/*
+
             SendMessageRequest sendMessageRequest = new SendMessageRequest(myQueueUrl, "This is my message text.");
             // You must provide a non-empty MessageGroupId when sending messages to a FIFO queue
             sendMessageRequest.setMessageGroupId("messageGroup1");
@@ -117,7 +117,7 @@ public class ColaMensaje {
             String sequenceNumber = sendMessageResult.getSequenceNumber();
             String messageId = sendMessageResult.getMessageId();
             System.out.println("SendMessage succeed with messageId " + messageId + ", sequence number " + sequenceNumber + "\n");
-*/
+
             // Receive messages
             System.out.println("Receiving messages from MyFifoQueue.fifo.\n");
             ReceiveMessageRequest receiveMessageRequest = new ReceiveMessageRequest(myQueueUrl);
